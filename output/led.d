@@ -1,0 +1,15 @@
+.\output\led.o: led.cpp
+.\output\led.o: type.h
+.\output\led.o: irq.h
+.\output\led.o: time.h
+.\output\led.o: C:\Keil\ARM\Inc\Philips\LPC22XX.H
+.\output\led.o: serial.h
+.\output\led.o: lpc21xx.h
+.\output\led.o: global.h
+.\output\led.o: serial.h
+.\output\led.o: timer.h
+.\output\led.o: analise.h
+.\output\led.o: ssp.h
+.\output\led.o: i2c.h
+.\output\led.o: led.h
+.\output\led.o: alarme.h

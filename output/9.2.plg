@@ -1,0 +1,580 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\MILLER2\instramed.uvproj
+Project File Date:  11/30/2020
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+compiling Startup.s...
+compiling Time.cpp...
+alarme.h(33): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(13): warning:  #1-D: last line of file ends without a newline
+Time.cpp(98): warning:  #111-D: statement is unreachable
+Time.cpp(54): warning:  #177-D: variable "TmrIntEcg" was declared but never referenced
+Time.cpp(56): warning:  #550-D: variable "AlarmeFisiologico" was set but never used
+Time.cpp(57): warning:  #177-D: variable "i" was declared but never referenced
+compiling Retarget.cpp...
+compiling irq.cpp...
+compiling timer.cpp...
+compiling global.cpp...
+compiling main.cpp...
+alarme.h(33): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(13): warning:  #1-D: last line of file ends without a newline
+main.cpp(37): warning:  #177-D: variable "a" was declared but never referenced
+compiling fsm_master.cpp...
+alarme.h(33): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(13): warning:  #1-D: last line of file ends without a newline
+compiling led.cpp...
+alarme.h(33): warning:  #1-D: last line of file ends without a newline
+led.cpp(438): warning:  #1-D: last line of file ends without a newline
+compiling alarme.cpp...
+alarme.h(33): warning:  #1-D: last line of file ends without a newline
+alarme.cpp(6): warning:  #177-D: variable "flag_timer_50ms" was declared but never referenced
+alarme.cpp(7): warning:  #177-D: variable "flag_timer_400ms" was declared but never referenced
+alarme.cpp(8): warning:  #177-D: variable "flag_timer_3000ms" was declared but never referenced
+alarme.cpp(10): warning:  #177-D: variable "flag_timer_125ms" was declared but never referenced
+alarme.cpp(11): warning:  #177-D: variable "flag_timer_1000ms" was declared but never referenced
+alarme.cpp(12): warning:  #177-D: variable "flag_timer_5000ms" was declared but never referenced
+alarme.cpp(14): warning:  #177-D: variable "timer_alarme_media_50" was declared but never referenced
+alarme.cpp(15): warning:  #177-D: variable "timer_alarme_media_400" was declared but never referenced
+alarme.cpp(16): warning:  #177-D: variable "timer_alarme_media_3000" was declared but never referenced
+alarme.cpp(18): warning:  #177-D: variable "timer_alarme_media_125" was declared but never referenced
+alarme.cpp(19): warning:  #177-D: variable "timer_alarme_media_1000" was declared but never referenced
+alarme.cpp(20): warning:  #177-D: variable "timer_alarme_media_5000" was declared but never referenced
+linking...
+Program Size: Code=6012 RO-data=32 RW-data=24 ZI-data=1256  
+FromELF: creating hex file...
+".\output\9.2.3" - 0 Errors, 26 Warning(s).
+Rebuild target 'Target 1'
+compiling Startup.s...
+compiling Time.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+Time.cpp(98): warning:  #111-D: statement is unreachable
+Time.cpp(54): warning:  #177-D: variable "TmrIntEcg" was declared but never referenced
+Time.cpp(56): warning:  #550-D: variable "AlarmeFisiologico" was set but never used
+Time.cpp(57): warning:  #177-D: variable "i" was declared but never referenced
+compiling Retarget.cpp...
+compiling irq.cpp...
+compiling timer.cpp...
+compiling global.cpp...
+compiling main.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+main.cpp(37): warning:  #177-D: variable "a" was declared but never referenced
+compiling fsm_master.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+compiling led.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+led.cpp(438): warning:  #1-D: last line of file ends without a newline
+compiling alarme.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+alarme.cpp(6): warning:  #177-D: variable "flag_timer_50ms" was declared but never referenced
+alarme.cpp(7): warning:  #177-D: variable "flag_timer_400ms" was declared but never referenced
+alarme.cpp(8): warning:  #177-D: variable "flag_timer_3000ms" was declared but never referenced
+alarme.cpp(10): warning:  #177-D: variable "flag_timer_125ms" was declared but never referenced
+alarme.cpp(11): warning:  #177-D: variable "flag_timer_1000ms" was declared but never referenced
+alarme.cpp(12): warning:  #177-D: variable "flag_timer_5000ms" was declared but never referenced
+alarme.cpp(14): warning:  #177-D: variable "timer_alarme_media_50" was declared but never referenced
+alarme.cpp(15): warning:  #177-D: variable "timer_alarme_media_400" was declared but never referenced
+alarme.cpp(16): warning:  #177-D: variable "timer_alarme_media_3000" was declared but never referenced
+alarme.cpp(18): warning:  #177-D: variable "timer_alarme_media_125" was declared but never referenced
+alarme.cpp(19): warning:  #177-D: variable "timer_alarme_media_1000" was declared but never referenced
+alarme.cpp(20): warning:  #177-D: variable "timer_alarme_media_5000" was declared but never referenced
+alarme.cpp(95): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6108 RO-data=32 RW-data=24 ZI-data=1256  
+FromELF: creating hex file...
+".\output\9.2.3" - 0 Errors, 27 Warning(s).
+Rebuild target 'Target 1'
+compiling Startup.s...
+compiling Time.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+Time.cpp(98): warning:  #111-D: statement is unreachable
+Time.cpp(54): warning:  #177-D: variable "TmrIntEcg" was declared but never referenced
+Time.cpp(56): warning:  #550-D: variable "AlarmeFisiologico" was set but never used
+Time.cpp(57): warning:  #177-D: variable "i" was declared but never referenced
+compiling Retarget.cpp...
+compiling irq.cpp...
+compiling timer.cpp...
+compiling global.cpp...
+compiling main.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+main.cpp(37): warning:  #177-D: variable "a" was declared but never referenced
+compiling fsm_master.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+compiling led.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+led.cpp(438): warning:  #1-D: last line of file ends without a newline
+compiling alarme.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+alarme.cpp(13): warning:  #177-D: variable "flag_timer_50ms" was declared but never referenced
+alarme.cpp(14): warning:  #177-D: variable "flag_timer_400ms" was declared but never referenced
+alarme.cpp(15): warning:  #177-D: variable "flag_timer_3000ms" was declared but never referenced
+alarme.cpp(17): warning:  #177-D: variable "flag_timer_125ms" was declared but never referenced
+alarme.cpp(18): warning:  #177-D: variable "flag_timer_1000ms" was declared but never referenced
+alarme.cpp(19): warning:  #177-D: variable "flag_timer_5000ms" was declared but never referenced
+alarme.cpp(21): warning:  #177-D: variable "timer_alarme_media_50" was declared but never referenced
+alarme.cpp(22): warning:  #177-D: variable "timer_alarme_media_400" was declared but never referenced
+alarme.cpp(23): warning:  #177-D: variable "timer_alarme_media_3000" was declared but never referenced
+alarme.cpp(25): warning:  #177-D: variable "timer_alarme_media_125" was declared but never referenced
+alarme.cpp(26): warning:  #177-D: variable "timer_alarme_media_1000" was declared but never referenced
+alarme.cpp(27): warning:  #177-D: variable "timer_alarme_media_5000" was declared but never referenced
+alarme.cpp(102): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6132 RO-data=32 RW-data=24 ZI-data=1256  
+FromELF: creating hex file...
+".\output\9.2.3" - 0 Errors, 27 Warning(s).
+Rebuild target 'Target 1'
+compiling Startup.s...
+compiling Time.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+Time.cpp(98): warning:  #111-D: statement is unreachable
+Time.cpp(54): warning:  #177-D: variable "TmrIntEcg" was declared but never referenced
+Time.cpp(56): warning:  #550-D: variable "AlarmeFisiologico" was set but never used
+Time.cpp(57): warning:  #177-D: variable "i" was declared but never referenced
+compiling Retarget.cpp...
+compiling irq.cpp...
+compiling timer.cpp...
+compiling global.cpp...
+compiling main.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+main.cpp(37): warning:  #177-D: variable "a" was declared but never referenced
+compiling fsm_master.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+compiling led.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+led.cpp(438): warning:  #1-D: last line of file ends without a newline
+compiling alarme.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+alarme.cpp(13): warning:  #177-D: variable "flag_timer_50ms" was declared but never referenced
+alarme.cpp(14): warning:  #177-D: variable "flag_timer_400ms" was declared but never referenced
+alarme.cpp(15): warning:  #177-D: variable "flag_timer_3000ms" was declared but never referenced
+alarme.cpp(17): warning:  #177-D: variable "flag_timer_125ms" was declared but never referenced
+alarme.cpp(18): warning:  #177-D: variable "flag_timer_1000ms" was declared but never referenced
+alarme.cpp(19): warning:  #177-D: variable "flag_timer_5000ms" was declared but never referenced
+alarme.cpp(21): warning:  #177-D: variable "timer_alarme_media_50" was declared but never referenced
+alarme.cpp(22): warning:  #177-D: variable "timer_alarme_media_400" was declared but never referenced
+alarme.cpp(23): warning:  #177-D: variable "timer_alarme_media_3000" was declared but never referenced
+alarme.cpp(25): warning:  #177-D: variable "timer_alarme_media_125" was declared but never referenced
+alarme.cpp(26): warning:  #177-D: variable "timer_alarme_media_1000" was declared but never referenced
+alarme.cpp(27): warning:  #177-D: variable "timer_alarme_media_5000" was declared but never referenced
+alarme.cpp(102): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6136 RO-data=32 RW-data=24 ZI-data=1256  
+FromELF: creating hex file...
+".\output\9.2.3" - 0 Errors, 27 Warning(s).
+Rebuild target 'Target 1'
+compiling Startup.s...
+compiling Time.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+Time.cpp(98): warning:  #111-D: statement is unreachable
+Time.cpp(54): warning:  #177-D: variable "TmrIntEcg" was declared but never referenced
+Time.cpp(56): warning:  #550-D: variable "AlarmeFisiologico" was set but never used
+Time.cpp(57): warning:  #177-D: variable "i" was declared but never referenced
+compiling Retarget.cpp...
+compiling irq.cpp...
+compiling timer.cpp...
+compiling global.cpp...
+compiling main.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+main.cpp(37): warning:  #177-D: variable "a" was declared but never referenced
+compiling fsm_master.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+compiling led.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+led.cpp(438): warning:  #1-D: last line of file ends without a newline
+compiling alarme.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+alarme.cpp(13): warning:  #177-D: variable "flag_timer_50ms" was declared but never referenced
+alarme.cpp(14): warning:  #177-D: variable "flag_timer_400ms" was declared but never referenced
+alarme.cpp(15): warning:  #177-D: variable "flag_timer_3000ms" was declared but never referenced
+alarme.cpp(17): warning:  #177-D: variable "flag_timer_125ms" was declared but never referenced
+alarme.cpp(18): warning:  #177-D: variable "flag_timer_1000ms" was declared but never referenced
+alarme.cpp(19): warning:  #177-D: variable "flag_timer_5000ms" was declared but never referenced
+alarme.cpp(21): warning:  #177-D: variable "timer_alarme_media_50" was declared but never referenced
+alarme.cpp(22): warning:  #177-D: variable "timer_alarme_media_400" was declared but never referenced
+alarme.cpp(23): warning:  #177-D: variable "timer_alarme_media_3000" was declared but never referenced
+alarme.cpp(25): warning:  #177-D: variable "timer_alarme_media_125" was declared but never referenced
+alarme.cpp(26): warning:  #177-D: variable "timer_alarme_media_1000" was declared but never referenced
+alarme.cpp(27): warning:  #177-D: variable "timer_alarme_media_5000" was declared but never referenced
+alarme.cpp(103): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6152 RO-data=32 RW-data=24 ZI-data=1256  
+FromELF: creating hex file...
+".\output\9.2.3" - 0 Errors, 27 Warning(s).
+Rebuild target 'Target 1'
+compiling Startup.s...
+compiling Time.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+Time.cpp(98): warning:  #111-D: statement is unreachable
+Time.cpp(54): warning:  #177-D: variable "TmrIntEcg" was declared but never referenced
+Time.cpp(56): warning:  #550-D: variable "AlarmeFisiologico" was set but never used
+Time.cpp(57): warning:  #177-D: variable "i" was declared but never referenced
+compiling Retarget.cpp...
+compiling irq.cpp...
+compiling timer.cpp...
+compiling global.cpp...
+compiling main.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+main.cpp(37): warning:  #177-D: variable "a" was declared but never referenced
+compiling fsm_master.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+compiling led.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+led.cpp(438): warning:  #1-D: last line of file ends without a newline
+compiling alarme.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+alarme.cpp(13): warning:  #177-D: variable "flag_timer_50ms" was declared but never referenced
+alarme.cpp(14): warning:  #177-D: variable "flag_timer_400ms" was declared but never referenced
+alarme.cpp(15): warning:  #177-D: variable "flag_timer_3000ms" was declared but never referenced
+alarme.cpp(17): warning:  #177-D: variable "flag_timer_125ms" was declared but never referenced
+alarme.cpp(18): warning:  #177-D: variable "flag_timer_1000ms" was declared but never referenced
+alarme.cpp(19): warning:  #177-D: variable "flag_timer_5000ms" was declared but never referenced
+alarme.cpp(21): warning:  #177-D: variable "timer_alarme_media_50" was declared but never referenced
+alarme.cpp(22): warning:  #177-D: variable "timer_alarme_media_400" was declared but never referenced
+alarme.cpp(23): warning:  #177-D: variable "timer_alarme_media_3000" was declared but never referenced
+alarme.cpp(25): warning:  #177-D: variable "timer_alarme_media_125" was declared but never referenced
+alarme.cpp(26): warning:  #177-D: variable "timer_alarme_media_1000" was declared but never referenced
+alarme.cpp(27): warning:  #177-D: variable "timer_alarme_media_5000" was declared but never referenced
+alarme.cpp(103): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6156 RO-data=32 RW-data=24 ZI-data=1256  
+FromELF: creating hex file...
+".\output\9.2.3" - 0 Errors, 27 Warning(s).
+Rebuild target 'Target 1'
+compiling Startup.s...
+compiling Time.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+Time.cpp(98): warning:  #111-D: statement is unreachable
+Time.cpp(54): warning:  #177-D: variable "TmrIntEcg" was declared but never referenced
+Time.cpp(56): warning:  #550-D: variable "AlarmeFisiologico" was set but never used
+Time.cpp(57): warning:  #177-D: variable "i" was declared but never referenced
+compiling Retarget.cpp...
+compiling irq.cpp...
+compiling timer.cpp...
+compiling global.cpp...
+compiling main.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+main.cpp(37): warning:  #177-D: variable "a" was declared but never referenced
+compiling fsm_master.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+compiling led.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+led.cpp(438): warning:  #1-D: last line of file ends without a newline
+compiling alarme.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+alarme.cpp(13): warning:  #177-D: variable "flag_timer_50ms" was declared but never referenced
+alarme.cpp(14): warning:  #177-D: variable "flag_timer_400ms" was declared but never referenced
+alarme.cpp(15): warning:  #177-D: variable "flag_timer_3000ms" was declared but never referenced
+alarme.cpp(17): warning:  #177-D: variable "flag_timer_125ms" was declared but never referenced
+alarme.cpp(18): warning:  #177-D: variable "flag_timer_1000ms" was declared but never referenced
+alarme.cpp(19): warning:  #177-D: variable "flag_timer_5000ms" was declared but never referenced
+alarme.cpp(21): warning:  #177-D: variable "timer_alarme_media_50" was declared but never referenced
+alarme.cpp(22): warning:  #177-D: variable "timer_alarme_media_400" was declared but never referenced
+alarme.cpp(23): warning:  #177-D: variable "timer_alarme_media_3000" was declared but never referenced
+alarme.cpp(25): warning:  #177-D: variable "timer_alarme_media_125" was declared but never referenced
+alarme.cpp(26): warning:  #177-D: variable "timer_alarme_media_1000" was declared but never referenced
+alarme.cpp(27): warning:  #177-D: variable "timer_alarme_media_5000" was declared but never referenced
+alarme.cpp(103): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6168 RO-data=32 RW-data=24 ZI-data=1256  
+FromELF: creating hex file...
+".\output\9.2.3" - 0 Errors, 27 Warning(s).
+Rebuild target 'Target 1'
+compiling Startup.s...
+compiling Time.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+Time.cpp(98): warning:  #111-D: statement is unreachable
+Time.cpp(54): warning:  #177-D: variable "TmrIntEcg" was declared but never referenced
+Time.cpp(56): warning:  #550-D: variable "AlarmeFisiologico" was set but never used
+Time.cpp(57): warning:  #177-D: variable "i" was declared but never referenced
+compiling Retarget.cpp...
+compiling irq.cpp...
+compiling timer.cpp...
+compiling global.cpp...
+compiling main.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+main.cpp(37): warning:  #177-D: variable "a" was declared but never referenced
+compiling fsm_master.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+compiling led.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+led.cpp(438): warning:  #1-D: last line of file ends without a newline
+compiling alarme.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+alarme.cpp(13): warning:  #177-D: variable "flag_timer_50ms" was declared but never referenced
+alarme.cpp(14): warning:  #177-D: variable "flag_timer_400ms" was declared but never referenced
+alarme.cpp(15): warning:  #177-D: variable "flag_timer_3000ms" was declared but never referenced
+alarme.cpp(17): warning:  #177-D: variable "flag_timer_125ms" was declared but never referenced
+alarme.cpp(18): warning:  #177-D: variable "flag_timer_1000ms" was declared but never referenced
+alarme.cpp(19): warning:  #177-D: variable "flag_timer_5000ms" was declared but never referenced
+alarme.cpp(21): warning:  #177-D: variable "timer_alarme_media_50" was declared but never referenced
+alarme.cpp(22): warning:  #177-D: variable "timer_alarme_media_400" was declared but never referenced
+alarme.cpp(23): warning:  #177-D: variable "timer_alarme_media_3000" was declared but never referenced
+alarme.cpp(25): warning:  #177-D: variable "timer_alarme_media_125" was declared but never referenced
+alarme.cpp(26): warning:  #177-D: variable "timer_alarme_media_1000" was declared but never referenced
+alarme.cpp(27): warning:  #177-D: variable "timer_alarme_media_5000" was declared but never referenced
+alarme.cpp(103): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6168 RO-data=32 RW-data=24 ZI-data=1256  
+FromELF: creating hex file...
+".\output\9.2.3" - 0 Errors, 27 Warning(s).
+Rebuild target 'Target 1'
+compiling Startup.s...
+compiling Time.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+Time.cpp(98): warning:  #111-D: statement is unreachable
+Time.cpp(54): warning:  #177-D: variable "TmrIntEcg" was declared but never referenced
+Time.cpp(56): warning:  #550-D: variable "AlarmeFisiologico" was set but never used
+Time.cpp(57): warning:  #177-D: variable "i" was declared but never referenced
+compiling Retarget.cpp...
+compiling irq.cpp...
+compiling timer.cpp...
+compiling global.cpp...
+compiling main.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+main.cpp(37): warning:  #177-D: variable "a" was declared but never referenced
+compiling fsm_master.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+compiling led.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+led.cpp(438): warning:  #1-D: last line of file ends without a newline
+compiling alarme.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+alarme.cpp(13): warning:  #177-D: variable "flag_timer_50ms" was declared but never referenced
+alarme.cpp(14): warning:  #177-D: variable "flag_timer_400ms" was declared but never referenced
+alarme.cpp(15): warning:  #177-D: variable "flag_timer_3000ms" was declared but never referenced
+alarme.cpp(17): warning:  #177-D: variable "flag_timer_125ms" was declared but never referenced
+alarme.cpp(18): warning:  #177-D: variable "flag_timer_1000ms" was declared but never referenced
+alarme.cpp(19): warning:  #177-D: variable "flag_timer_5000ms" was declared but never referenced
+alarme.cpp(21): warning:  #177-D: variable "timer_alarme_media_50" was declared but never referenced
+alarme.cpp(22): warning:  #177-D: variable "timer_alarme_media_400" was declared but never referenced
+alarme.cpp(23): warning:  #177-D: variable "timer_alarme_media_3000" was declared but never referenced
+alarme.cpp(25): warning:  #177-D: variable "timer_alarme_media_125" was declared but never referenced
+alarme.cpp(26): warning:  #177-D: variable "timer_alarme_media_1000" was declared but never referenced
+alarme.cpp(27): warning:  #177-D: variable "timer_alarme_media_5000" was declared but never referenced
+alarme.cpp(102): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6168 RO-data=32 RW-data=24 ZI-data=1256  
+FromELF: creating hex file...
+".\output\9.2.3" - 0 Errors, 27 Warning(s).
+Rebuild target 'Target 1'
+compiling Startup.s...
+compiling Time.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+Time.cpp(51): error:  #330-D: "Master_FSM::Master_FSM()" (declared at line 5 of "fsm_master.h") is inaccessible
+Time.cpp(98): warning:  #111-D: statement is unreachable
+Time.cpp(54): warning:  #177-D: variable "TmrIntEcg" was declared but never referenced
+Time.cpp(56): warning:  #550-D: variable "AlarmeFisiologico" was set but never used
+Time.cpp(57): warning:  #177-D: variable "i" was declared but never referenced
+compiling Retarget.cpp...
+compiling irq.cpp...
+compiling timer.cpp...
+compiling global.cpp...
+compiling main.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+main.cpp(37): warning:  #177-D: variable "a" was declared but never referenced
+compiling fsm_master.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(14): warning:  #1-D: last line of file ends without a newline
+compiling led.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+led.cpp(438): warning:  #1-D: last line of file ends without a newline
+compiling alarme.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+alarme.cpp(13): warning:  #177-D: variable "flag_timer_50ms" was declared but never referenced
+alarme.cpp(14): warning:  #177-D: variable "flag_timer_400ms" was declared but never referenced
+alarme.cpp(15): warning:  #177-D: variable "flag_timer_3000ms" was declared but never referenced
+alarme.cpp(17): warning:  #177-D: variable "flag_timer_125ms" was declared but never referenced
+alarme.cpp(18): warning:  #177-D: variable "flag_timer_1000ms" was declared but never referenced
+alarme.cpp(19): warning:  #177-D: variable "flag_timer_5000ms" was declared but never referenced
+alarme.cpp(21): warning:  #177-D: variable "timer_alarme_media_50" was declared but never referenced
+alarme.cpp(22): warning:  #177-D: variable "timer_alarme_media_400" was declared but never referenced
+alarme.cpp(23): warning:  #177-D: variable "timer_alarme_media_3000" was declared but never referenced
+alarme.cpp(25): warning:  #177-D: variable "timer_alarme_media_125" was declared but never referenced
+alarme.cpp(26): warning:  #177-D: variable "timer_alarme_media_1000" was declared but never referenced
+alarme.cpp(27): warning:  #177-D: variable "timer_alarme_media_5000" was declared but never referenced
+alarme.cpp(101): warning:  #1-D: last line of file ends without a newline
+".\output\9.2.3" - 1 Errors, 27 Warning(s).
+Target not created
+Load "C:\\Users\\mperez\\Desktop\\MILLER INSTRAMED\\HELIOS ALIVE\\SOFTWARE\\MILLER2\\output\\9.2.3" 
+_____^
+*** error 56: cannot open file
+Load "C:\\Users\\mperez\\Desktop\\MILLER INSTRAMED\\HELIOS ALIVE\\SOFTWARE\\MILLER2\\output\\9.2.3" 
+_____^
+*** error 56: cannot open file
+Load "C:\\Users\\mperez\\Desktop\\MILLER INSTRAMED\\HELIOS ALIVE\\SOFTWARE\\MILLER2\\output\\9.2.3" 
+_____^
+*** error 56: cannot open file
+Load "C:\\Users\\mperez\\Desktop\\MILLER INSTRAMED\\HELIOS ALIVE\\SOFTWARE\\MILLER2\\output\\9.2.3" 
+_____^
+*** error 56: cannot open file
+Load "C:\\Users\\mperez\\Desktop\\MILLER INSTRAMED\\HELIOS ALIVE\\SOFTWARE\\MILLER2\\output\\9.2" 
+_____^
+*** error 56: cannot open file
+Load "C:\\Users\\mperez\\Desktop\\MILLER INSTRAMED\\HELIOS ALIVE\\SOFTWARE\\MILLER2\\output\\9.2" 
+_____^
+*** error 56: cannot open file
+Rebuild target 'Target 1'
+compiling Startup.s...
+compiling Time.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(15): warning:  #1-D: last line of file ends without a newline
+Time.cpp(98): warning:  #111-D: statement is unreachable
+Time.cpp(54): warning:  #177-D: variable "TmrIntEcg" was declared but never referenced
+Time.cpp(56): warning:  #550-D: variable "AlarmeFisiologico" was set but never used
+Time.cpp(57): warning:  #177-D: variable "i" was declared but never referenced
+compiling Retarget.cpp...
+compiling irq.cpp...
+compiling timer.cpp...
+compiling global.cpp...
+compiling main.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(15): warning:  #1-D: last line of file ends without a newline
+main.cpp(37): warning:  #177-D: variable "a" was declared but never referenced
+compiling fsm_master.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(15): warning:  #1-D: last line of file ends without a newline
+compiling led.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+led.cpp(438): warning:  #1-D: last line of file ends without a newline
+compiling alarme.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+alarme.cpp(13): warning:  #177-D: variable "flag_timer_50ms" was declared but never referenced
+alarme.cpp(14): warning:  #177-D: variable "flag_timer_400ms" was declared but never referenced
+alarme.cpp(15): warning:  #177-D: variable "flag_timer_3000ms" was declared but never referenced
+alarme.cpp(17): warning:  #177-D: variable "flag_timer_125ms" was declared but never referenced
+alarme.cpp(18): warning:  #177-D: variable "flag_timer_1000ms" was declared but never referenced
+alarme.cpp(19): warning:  #177-D: variable "flag_timer_5000ms" was declared but never referenced
+alarme.cpp(21): warning:  #177-D: variable "timer_alarme_media_50" was declared but never referenced
+alarme.cpp(22): warning:  #177-D: variable "timer_alarme_media_400" was declared but never referenced
+alarme.cpp(23): warning:  #177-D: variable "timer_alarme_media_3000" was declared but never referenced
+alarme.cpp(25): warning:  #177-D: variable "timer_alarme_media_125" was declared but never referenced
+alarme.cpp(26): warning:  #177-D: variable "timer_alarme_media_1000" was declared but never referenced
+alarme.cpp(27): warning:  #177-D: variable "timer_alarme_media_5000" was declared but never referenced
+alarme.cpp(101): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6168 RO-data=32 RW-data=24 ZI-data=1256  
+FromELF: creating hex file...
+".\output\9.2" - 0 Errors, 27 Warning(s).
+Load "C:\\Users\\mperez\\Desktop\\MILLER INSTRAMED\\HELIOS ALIVE\\SOFTWARE\\MILLER2\\output\\9.2" 
+Load "C:\\Users\\mperez\\Desktop\\MILLER INSTRAMED\\HELIOS ALIVE\\SOFTWARE\\MILLER2\\output\\9.2" 
+Erase Done.
+Programming Done.
+Verify OK.
+Rebuild target 'Target 1'
+compiling Startup.s...
+compiling Time.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(15): warning:  #1-D: last line of file ends without a newline
+Time.cpp(98): warning:  #111-D: statement is unreachable
+Time.cpp(54): warning:  #177-D: variable "TmrIntEcg" was declared but never referenced
+Time.cpp(56): warning:  #550-D: variable "AlarmeFisiologico" was set but never used
+Time.cpp(57): warning:  #177-D: variable "i" was declared but never referenced
+compiling Retarget.cpp...
+compiling irq.cpp...
+compiling timer.cpp...
+compiling global.cpp...
+compiling main.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(15): warning:  #1-D: last line of file ends without a newline
+main.cpp(37): warning:  #177-D: variable "a" was declared but never referenced
+compiling fsm_master.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(15): warning:  #1-D: last line of file ends without a newline
+compiling led.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+led.cpp(438): warning:  #1-D: last line of file ends without a newline
+compiling alarme.cpp...
+alarme.h(34): warning:  #1-D: last line of file ends without a newline
+alarme.cpp(13): warning:  #177-D: variable "flag_timer_50ms" was declared but never referenced
+alarme.cpp(14): warning:  #177-D: variable "flag_timer_400ms" was declared but never referenced
+alarme.cpp(15): warning:  #177-D: variable "flag_timer_3000ms" was declared but never referenced
+alarme.cpp(17): warning:  #177-D: variable "flag_timer_125ms" was declared but never referenced
+alarme.cpp(18): warning:  #177-D: variable "flag_timer_1000ms" was declared but never referenced
+alarme.cpp(19): warning:  #177-D: variable "flag_timer_5000ms" was declared but never referenced
+alarme.cpp(21): warning:  #177-D: variable "timer_alarme_media_50" was declared but never referenced
+alarme.cpp(22): warning:  #177-D: variable "timer_alarme_media_400" was declared but never referenced
+alarme.cpp(23): warning:  #177-D: variable "timer_alarme_media_3000" was declared but never referenced
+alarme.cpp(25): warning:  #177-D: variable "timer_alarme_media_125" was declared but never referenced
+alarme.cpp(26): warning:  #177-D: variable "timer_alarme_media_1000" was declared but never referenced
+alarme.cpp(27): warning:  #177-D: variable "timer_alarme_media_5000" was declared but never referenced
+alarme.cpp(101): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6168 RO-data=32 RW-data=24 ZI-data=1256  
+FromELF: creating hex file...
+".\output\9.2" - 0 Errors, 27 Warning(s).
+Rebuild target 'Target 1'
+compiling Startup.s...
+compiling Time.cpp...
+alarme.h(33): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(15): warning:  #1-D: last line of file ends without a newline
+Time.cpp(98): warning:  #111-D: statement is unreachable
+Time.cpp(54): warning:  #177-D: variable "TmrIntEcg" was declared but never referenced
+Time.cpp(56): warning:  #550-D: variable "AlarmeFisiologico" was set but never used
+Time.cpp(57): warning:  #177-D: variable "i" was declared but never referenced
+compiling Retarget.cpp...
+compiling irq.cpp...
+compiling timer.cpp...
+compiling global.cpp...
+compiling main.cpp...
+alarme.h(33): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(15): warning:  #1-D: last line of file ends without a newline
+main.cpp(37): warning:  #177-D: variable "a" was declared but never referenced
+compiling fsm_master.cpp...
+alarme.h(33): warning:  #1-D: last line of file ends without a newline
+fsm_master.h(15): warning:  #1-D: last line of file ends without a newline
+compiling led.cpp...
+alarme.h(33): warning:  #1-D: last line of file ends without a newline
+led.cpp(438): warning:  #1-D: last line of file ends without a newline
+compiling alarme.cpp...
+alarme.h(33): warning:  #1-D: last line of file ends without a newline
+alarme.cpp(13): warning:  #177-D: variable "flag_timer_50ms" was declared but never referenced
+alarme.cpp(14): warning:  #177-D: variable "flag_timer_400ms" was declared but never referenced
+alarme.cpp(15): warning:  #177-D: variable "flag_timer_3000ms" was declared but never referenced
+alarme.cpp(17): warning:  #177-D: variable "flag_timer_125ms" was declared but never referenced
+alarme.cpp(18): warning:  #177-D: variable "flag_timer_1000ms" was declared but never referenced
+alarme.cpp(19): warning:  #177-D: variable "flag_timer_5000ms" was declared but never referenced
+alarme.cpp(21): warning:  #177-D: variable "timer_alarme_media_50" was declared but never referenced
+alarme.cpp(22): warning:  #177-D: variable "timer_alarme_media_400" was declared but never referenced
+alarme.cpp(23): warning:  #177-D: variable "timer_alarme_media_3000" was declared but never referenced
+alarme.cpp(25): warning:  #177-D: variable "timer_alarme_media_125" was declared but never referenced
+alarme.cpp(26): warning:  #177-D: variable "timer_alarme_media_1000" was declared but never referenced
+alarme.cpp(27): warning:  #177-D: variable "timer_alarme_media_5000" was declared but never referenced
+alarme.cpp(101): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6168 RO-data=32 RW-data=24 ZI-data=1256  
+FromELF: creating hex file...
+".\output\9.2" - 0 Errors, 27 Warning(s).
+Load "C:\\Users\\mperez\\Desktop\\MILLER INSTRAMED\\HELIOS ALIVE\\SOFTWARE\\MILLER2\\output\\9.2" 
+Erase Done.
+Programming Done.
+Verify OK.

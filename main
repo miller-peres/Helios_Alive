@@ -1,0 +1,6 @@
+#include "main"
+
+Led::Led()
+{
+
+}

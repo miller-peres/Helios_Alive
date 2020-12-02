@@ -1,0 +1,5 @@
+--cpp -c --cpu ARM7TDMI -D__EVAL -g -O3 --split_ldm -Ic:\instramed
+-I C:\Keil\ARM\RV31\INC
+-I C:\Keil\ARM\CMSIS\Include
+-I C:\Keil\ARM\Inc\Philips
+-o .\output\master_fsm.o --depend .\output\master_fsm.d "master_FSM.cpp"

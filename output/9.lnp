@@ -1,0 +1,15 @@
+--cpu ARM7TDMI
+".\output\startup.o"
+".\output\time.o"
+".\output\retarget.o"
+".\output\irq.o"
+".\output\timer.o"
+".\output\global.o"
+".\output\main.o"
+".\output\fsm_master.o"
+".\output\led.o"
+".\output\alarme.o"
+--strict --scatter ".\output\9.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\output\9.map" -o .\output\9.2

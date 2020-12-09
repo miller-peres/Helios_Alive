@@ -26,7 +26,6 @@
 #include "analise.h"
 #include "ssp.h"
 #include "i2c.h"
-//#include "alarme.h"
 #include "fsm_master.h"
 
 /*******************************************************************
@@ -46,16 +45,13 @@
 // VARIAVEIS LOCAIS
 long delaycount;
 
-void timer_0_ISR(void) __irq 
-{
-	Master_FSM FSM_state; 
-	
-	//ontimer = 1;
+void timer_0_ISR(void) __irq // entra aqui a cada estouro,
+{	
 	static unsigned char TmrIntEcg = 0, FlagInterrupt = 0;
 	
 	static unsigned char AlarmeFisiologico = 0;
 	unsigned char i = 0;
-	
+			Master_FSM FSM_state; 
 	
 	if(FlagInterrupt == 0) 
 	{
@@ -73,7 +69,8 @@ void timer_0_ISR(void) __irq
 		}
 		else if(gTempoTeclaLiga < TEMPO_BOTAO_LIGA)
 		{ gTempoTeclaLiga++;
-			//IO0SET |= BUZZER;
+			IO0SET |= BUZZER;
+			
 		}
 			
 		if(gTempoTeclaLiga >= TEMPO_BOTAO_LIGA)
@@ -105,12 +102,9 @@ void timer_0_ISR(void) __irq
 		}
 				
 		    timerseg++;
-				FSM_state.FSM_timer(); // obj maquina
-						
+				FSM_state.FSM_START();
 		
 		FlagInterrupt = 0;
-		if(gTempoPiscaLed < 8000) gTempoPiscaLed++;
-		else {gTempoPiscaLed = 0;}
 			 
 	}
 					

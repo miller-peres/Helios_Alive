@@ -12,4 +12,3 @@
 .\output\led.o: ssp.h
 .\output\led.o: i2c.h
 .\output\led.o: led.h
-.\output\led.o: alarme.h

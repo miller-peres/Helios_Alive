@@ -165,7 +165,7 @@
             <Capability>1</Capability>
             <DriverSelection>4096</DriverSelection>
           </Flash1>
-          <bUseTDR>0</bUseTDR>
+          <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2ARM.DLL</Flash2>
           <Flash3>"LPC210x_ISP.EXE" ("#H" ^X $D COM1: 9600 1)</Flash3>
           <Flash4></Flash4>
@@ -438,9 +438,9 @@
               <FilePath>.\led.cpp</FilePath>
             </File>
             <File>
-              <FileName>alarme.cpp</FileName>
+              <FileName>botao.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\alarme.cpp</FilePath>
+              <FilePath>.\botao.cpp</FilePath>
             </File>
           </Files>
         </Group>

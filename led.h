@@ -1,36 +1,35 @@
-#include "alarme.h"
+
+		
+	  enum LEDstate
+	{
+			CONFIG,
+			LIGA_LED,
+			DESL_LED,
+	};
 
 class Led
 {
 	
 	public:
 		Led(void);
-		void ECG_Alta_Ligado(void);
-		void ECG_Media_Ligado(void);
+		unsigned short int led_on_off;
+		unsigned short int Cycle_2;
+		unsigned short int Cycle;
+		unsigned short int state_led;
+		unsigned short int Reset_cycle;
+		unsigned short int TIME_INT;
+		unsigned  int tick;
+		unsigned short int flag_tec_alarm_ECG;
+		unsigned short int flag_tec_alarm_SPO2;
+		unsigned short int flag_tec_alarm_ENF;
+		unsigned short int flag_tec_alarm_BAT;
+		unsigned short int flag_phy_alarm_ECG;
+		unsigned short int flag_phy_alarm_SPO2;
+		unsigned short int flag_tec_alarm;
+		unsigned short int flag_phy_alarm;
+		
+		void FSM_LED(void);
+		
 	
-		void SPO2_Alta_Ligado(void);
-		void SPO2_Media_Ligado(void);
-	
-		void BAT_OK_Ligado(void);
-		void BAT_Media_Ligado(void);
-	
-		void ENF_Alta_Ligado(void);
-		void ENF_Media_Ligado(void);
-	
-		void Desliga(void);
-	
-		void ECG_Media(void);
-		void ECG_Alta(void);
-	
-		void SPO2_Media(void);
-		void SPO2_Alta(void);
-	
-		void ENF_Media(void);
-	
-		void ON_BAT_Media(void);
-	
-	
-
-			
 };
 

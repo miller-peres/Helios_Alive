@@ -1,6 +1,6 @@
 Dependencies for Project 'instramed', Target 'Target 1': (DO NOT MODIFY !)
 F (.\Startup.s)(0x5FB574BE)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O3 --split_ldm -Ic:\instramed-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\output\startup.o --depend .\output\startup.d)
-F (.\Time.cpp)(0x5FC63840)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O3 --split_ldm -Ic:\instramed-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\output\time.o --depend .\output\time.d)
+F (.\Time.cpp)(0x5FD0C089)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O3 --split_ldm -Ic:\instramed-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\output\time.o --depend .\output\time.d)
 I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C851F4)
 I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C851F4)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\type.h)(0x565C4C16)
@@ -14,9 +14,8 @@ I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\tim
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\analise.h)(0x565C4C16)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\ssp.h)(0x565C4C16)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\i2c.h)(0x565C4C16)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\fsm_master.h)(0x5FC77D96)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\led.h)(0x5FC77D95)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\alarme.h)(0x5FC778FF)
+I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\fsm_master.h)(0x5FD0B257)
+I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\led.h)(0x5FD0B257)
 F (.\Retarget.cpp)(0x5FB6719C)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O3 --split_ldm -Ic:\instramed-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\output\retarget.o --depend .\output\retarget.d)
 I (C:\Keil\ARM\ARMCC\include\rt_misc.h)(0x51C851F4)
 I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C851F4)
@@ -27,11 +26,11 @@ I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\typ
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\irq.h)(0x565C4C16)
 F (.\timer.cpp)(0x5FB648F8)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O3 --split_ldm -Ic:\instramed-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\output\timer.o --depend .\output\timer.d)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\lpc21xx.h)(0x565C4C16)
-F (.\global.cpp)(0x5FC52538)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O3 --split_ldm -Ic:\instramed-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\output\global.o --depend .\output\global.d)
+F (.\global.cpp)(0x5FC91331)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O3 --split_ldm -Ic:\instramed-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\output\global.o --depend .\output\global.d)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\global.h)(0x5FC52538)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\serial.h)(0x565C4C16)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\type.h)(0x565C4C16)
-F (.\main.cpp)(0x5FBFADC7)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O3 --split_ldm -Ic:\instramed-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\output\main.o --depend .\output\main.d)
+F (.\main.cpp)(0x5FCF55ED)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O3 --split_ldm -Ic:\instramed-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\output\main.o --depend .\output\main.d)
 I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C851F4)
 I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C851F4)
 I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C851F4)
@@ -46,10 +45,9 @@ I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\tim
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\analise.h)(0x565C4C16)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\ssp.h)(0x565C4C16)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\i2c.h)(0x565C4C16)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\fsm_master.h)(0x5FC77D96)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\led.h)(0x5FC77D95)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\alarme.h)(0x5FC778FF)
-F (.\fsm_master.cpp)(0x5FC778FF)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O3 --split_ldm -Ic:\instramed-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\output\fsm_master.o --depend .\output\fsm_master.d)
+I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\fsm_master.h)(0x5FD0B257)
+I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\led.h)(0x5FD0B257)
+F (.\fsm_master.cpp)(0x5FCF5625)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O3 --split_ldm -Ic:\instramed-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\output\fsm_master.o --depend .\output\fsm_master.d)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\type.h)(0x565C4C16)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\irq.h)(0x565C4C16)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\serial.h)(0x565C4C16)
@@ -61,10 +59,9 @@ I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\ssp
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\i2c.h)(0x565C4C16)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\time.h)(0x5FBFC958)
 I (C:\Keil\ARM\Inc\Philips\LPC22XX.H)(0x51C853EC)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\fsm_master.h)(0x5FC77D96)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\led.h)(0x5FC77D95)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\alarme.h)(0x5FC778FF)
-F (.\led.cpp)(0x5FC5402A)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O3 --split_ldm -Ic:\instramed-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\output\led.o --depend .\output\led.d)
+I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\fsm_master.h)(0x5FD0B257)
+I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\led.h)(0x5FD0B257)
+F (.\led.cpp)(0x5FD0C089)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O3 --split_ldm -Ic:\instramed-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\output\led.o --depend .\output\led.d)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\type.h)(0x565C4C16)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\irq.h)(0x565C4C16)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\time.h)(0x5FBFC958)
@@ -76,15 +73,5 @@ I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\tim
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\analise.h)(0x565C4C16)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\ssp.h)(0x565C4C16)
 I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\i2c.h)(0x565C4C16)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\led.h)(0x5FC77D95)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\alarme.h)(0x5FC778FF)
-F (.\alarme.cpp)(0x5FC642A3)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O3 --split_ldm -Ic:\instramed-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\output\alarme.o --depend .\output\alarme.d)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\alarme.h)(0x5FC778FF)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\type.h)(0x565C4C16)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\irq.h)(0x565C4C16)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\time.h)(0x5FBFC958)
-I (C:\Keil\ARM\Inc\Philips\LPC22XX.H)(0x51C853EC)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\serial.h)(0x565C4C16)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\lpc21xx.h)(0x565C4C16)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\global.h)(0x5FC52538)
-I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\timer.h)(0x565C4C16)
+I (C:\Users\mperez\Desktop\MILLER INSTRAMED\HELIOS ALIVE\SOFTWARE\Helios_c++\led.h)(0x5FD0B257)
+F (.\botao.cpp)(0x5FD0C0C7)()

@@ -2,8 +2,6 @@
 #include "serial.h"
 #include "type.h"
 
-
-
 unsigned int timerseg = 0;
 unsigned short ADCresult[4];
 unsigned int gCanalAD = 0;

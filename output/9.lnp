@@ -8,7 +8,7 @@
 ".\output\main.o"
 ".\output\fsm_master.o"
 ".\output\led.o"
-".\output\alarme.o"
+".\output\botao.o"
 --strict --scatter ".\output\9.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

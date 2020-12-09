@@ -13,4 +13,3 @@
 .\output\fsm_master.o: C:\Keil\ARM\Inc\Philips\LPC22XX.H
 .\output\fsm_master.o: fsm_master.h
 .\output\fsm_master.o: led.h
-.\output\fsm_master.o: alarme.h

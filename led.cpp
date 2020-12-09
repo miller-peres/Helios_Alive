@@ -10,13 +10,19 @@
 #include "i2c.h"
 #include "led.h"
 
+enum STATE_LED_FSM
+{
+	IDLE = 0,
+	DEFINE_ALARMS_PRIORITY,
+};
+
 Led::Led(void){}
 
 void Led::FSM_LED(void)
 {
 		switch (state_led)
 		{
-			case 0:
+			case IDLE:
 				//timerseg++;	
 				Led LED_OBJ;
 				tick = timerseg;
@@ -32,12 +38,12 @@ void Led::FSM_LED(void)
 				flag_phy_alarm_SPO2 = 0;
 				flag_phy_alarm_ECG = 0;
 				
-				state_led = 1;
+				state_led = DEFINE_ALARMS_PRIORITY;
 
 			break;
 			
-			case 1:
-				// DEFINE PRIORIDADE PARA ALARME FISIOLÓGICO
+			case DEFINE_ALARMS_PRIORITY:
+				// DEFINE PRIORIDADE PARA ALARME FISIOLï¿½GICO
 				if ((flag_tec_alarm == 1) && (flag_phy_alarm == 1))
 				{
 					state_led = 5;
@@ -54,7 +60,7 @@ void Led::FSM_LED(void)
 				}
 			break;
 				
-				// ALARMES TÉCNICOS
+				// ALARMES Tï¿½CNICOS
 				case 2:
 					
 					if (timerseg % 2 == 0)
@@ -132,7 +138,7 @@ void Led::FSM_LED(void)
 								
 				break;
 				
-				// ALARMES FISIOLÓGICOS
+				// ALARMES FISIOLï¿½GICOS
 				case 5:
 				
 				// LIGA LED EQUIPAMENTO LIGADO SE BATERIA ESTIVER ACIMA DE 6%
@@ -146,7 +152,7 @@ void Led::FSM_LED(void)
 					IO0SET |= BUZZER;
 					
 				
-				// LIGA O LED ESPECIFICO DO ALARME FISIOLÓGICO
+				// LIGA O LED ESPECIFICO DO ALARME FISIOLï¿½GICO
 				if (flag_phy_alarm_ECG == 1)  IO0SET|= LED_ECG;
 				if (flag_phy_alarm_SPO2 == 1) IO0SET |= LED_SPO2;
 				

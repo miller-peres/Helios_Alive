@@ -6,7 +6,7 @@
 #define TX0						P0_0
 #define	SCK0					P0_4
 #define	MOSI0 					P0_6
-#define BUZZER    				P0_7
+//#define BUZZER    				P0_7
 #define TX1						P0_8
 #define	ON_OFF					P0_10
 #define	LED_ECG					P0_13

@@ -30,7 +30,4 @@ int main(int argc, char** argv)
 	IO0DIR |= ( TX0 + SCK0 + MOSI0 + BUZZER + TX1 + ON_OFF  + CS_AD  + DER_1 + DER_2 + RESET_ZIGBEE); 
 	PINSEL1 &= ~0xC000000 ;								//Configura o pino P0_29 como GPIO
 	//I2CInit(I2CMASTER);										// inicializa i2c
-	//Alarme init_timer_alarm;
-	
-	
 }

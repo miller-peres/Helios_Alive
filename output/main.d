@@ -16,3 +16,5 @@
 .\output\main.o: i2c.h
 .\output\main.o: fsm_master.h
 .\output\main.o: led.h
+.\output\main.o: alarm.h
+.\output\main.o: botao.h

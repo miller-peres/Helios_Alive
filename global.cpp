@@ -12,7 +12,7 @@ unsigned char gAlarmeFisiologico = 0;
 unsigned char gBotaoDesliga = 0;
 unsigned int gIndexVetor = 0;
 //miller
-unsigned int START_FSM = 0;
+
 
 unsigned int gTempoPiscaLed = 0;
 

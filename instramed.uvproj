@@ -442,6 +442,11 @@
               <FileType>8</FileType>
               <FilePath>.\botao.cpp</FilePath>
             </File>
+            <File>
+              <FileName>alarm.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\alarm.cpp</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

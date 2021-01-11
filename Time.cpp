@@ -45,96 +45,16 @@
 // VARIAVEIS LOCAIS
 long delaycount;
 
-void timer_0_ISR(void) __irq // entra aqui a cada estouro,
+void timer_0_ISR(void) __irq // entra aqui a cada estouro
 {	
-	static unsigned char TmrIntEcg = 0, FlagInterrupt = 0;
-	
-	static unsigned char AlarmeFisiologico = 0;
-	unsigned char i = 0;
-			Master_FSM FSM_state; 
-	
-	if(FlagInterrupt == 0) 
-	{
-	  
-		FlagInterrupt = 1;
-		AlarmeFisiologico = gAlarmeFisiologico;
-		
-	
-		//Leitura da chave liga desliga
-		if(!(IOPIN0 & BOTAO_ON_OFF))
-		{
-			gTempoTeclaLiga = 0;
-			IO0CLR |= BUZZER;
-			
-		}
-		else if(gTempoTeclaLiga < TEMPO_BOTAO_LIGA)
-		{ gTempoTeclaLiga++;
-			IO0SET |= BUZZER;
-			
-		}
-			
-		if(gTempoTeclaLiga >= TEMPO_BOTAO_LIGA)
-		{
-			//if(gLiberaDesliga)
-			//{
-				IO0CLR |= RESET_ZIGBEE;//reseta o Zigbee
-				//Desliga todos GPIOs
-				//IO0DIR  = 0;
-				IO0CLR |= ON_OFF;
-				IO0SET |= LED_ECG;
-				IO0SET |= LED_SPO2;
-				IO0SET |= LED_ENF;
-				IO0CLR |= BUZZER;
-				IO0SET |= LED_ON_BAT;
-				gIndexVetor = 0;
-				while(1)
-				{
-					//Só fica preso para o software não rodar quando quiser desligar o aparelho.
-				}
-			//}
-			gBotaoDesliga = 1;
-		}
-		else     
-		{
-			gBotaoDesliga = 0;
-			
-			IO0SET |= ON_OFF;
-		}
+	static Master_FSM FSM_state; 
+	FSM_state.FSM_START();
 				
-		    timerseg++;
-				FSM_state.FSM_START();
-		
-		FlagInterrupt = 0;
-			 
-	}
-					
 	T0IR = 1;                             // Clear interrupt flag
 	VICVectAddr = 0;                      // Acknowledge Interrupt
-	++delaycount;
 }
 
-//void timer_1_ISR(void) __irq 
-//{
-//	
-//	switch(gCanalAD)
-//	{
-//	case	0:
-//		ADCR &= 0xFFFFFFF0; // zera seleção do canal do ad
-//		ADCR |= 0x01000001; // inicia leitura no canal 0 do ad
-//		gCanalAD = 1;
-//		break;
-//	case	1:
-//		ADCR &= 0xFFFFFFF0; // zera seleção do canal do ad
-//		ADCR |= 0x01000002; // inicia leitura no canal 1 do ad
-//		gCanalAD = 0;
-//		break;
-//	default:
-//		break;
-//	}
-//	
-//	T1IR        = 1;                            // Clear interrupt flag
-//  VICVectAddr = 0;                            // Acknowledge Interrupt
-//}
+
 
 /** GetCclk
  *

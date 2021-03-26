@@ -2,17 +2,17 @@
 #include <stdio.h>
 #include <math.h>
 #include "type.h"
-#include "irq.h"
+//#include "irq.h"
 #include "time.h"
 #include "serial.h"
 #include "lpc21xx.h"
 #include "global.h"
 #include "timer.h"
-#include "analise.h"
-#include "ssp.h"
-#include "i2c.h"
 #include "fsm_master.h"
-
+#include "zigbee.h"
+//#include "vic.h"
+//#include "spo2.h"
+#define BUZZER    				P0_7
 
 unsigned char derivacao = 0;
 unsigned char i = 0;
@@ -20,14 +20,23 @@ unsigned char i = 0;
 
 int main(int argc, char** argv)
 {
-	init_VIC();
-	
-	InitTimer(0,250);
-	//InitTimer(1,10000);									//quanto maior, menor a frequencia do clock
-	//Master_FSM FSM_state; 
-	//InitTimer(0,250); 									//aqui, quanto maior, menor a frequencia do clock, setado para 250us
-	IO0DIR |= ( LED_ENF + LED_SPO2 + LED_ECG + LED_ON_BAT );												
-	IO0DIR |= ( TX0 + SCK0 + MOSI0 + BUZZER + TX1 + ON_OFF  + CS_AD  + DER_1 + DER_2 + RESET_ZIGBEE); 
+	static Vic start;
+	//init_VIC();
+	start.init_VIC();
+	InitTimer(0,250); // FSM_Master, FSM_LED, FSM_Button, FSM_Alarm estão aqui dentro
+	int a;
+	// DEFINE PINOS DE SAÍDA
+	IO0DIR |= ( LED_ENF + LED_SPO2 + LED_ECG + LED_ON_BAT  + LED_VM_AM );												
+	IO0DIR |= ( TX0 + SCK0 + MOSI0 + BUZZER + TX1 + ON_OFF  + CS_AD  + DER_1 + DER_2 + RESET_ZIGBEE ); 
+	PINSEL1 &= ~0xE000000 ;								//Configura o pino P0_28 como GPIO
 	PINSEL1 &= ~0xC000000 ;								//Configura o pino P0_29 como GPIO
-	//I2CInit(I2CMASTER);										// inicializa i2c
+	PINSEL1 &= ~0x1C000000 ;							//Configura o pino P0_30 como GPIO
+	static Zigbee Init_zigbee;
+	static Vic init_VIC_cpy;
+	Init_zigbee.config_COM_zigbee(init_VIC_cpy);
+	IO0SET |= RESET_ZIGBEE;
+	while(1) 							
+	{
+		Init_zigbee.send_package(false);
+	}
 }

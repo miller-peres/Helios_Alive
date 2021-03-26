@@ -1,14 +1,10 @@
 .\output\fsm_master.o: fsm_master.cpp
 .\output\fsm_master.o: type.h
-.\output\fsm_master.o: irq.h
 .\output\fsm_master.o: serial.h
 .\output\fsm_master.o: lpc21xx.h
 .\output\fsm_master.o: global.h
 .\output\fsm_master.o: serial.h
 .\output\fsm_master.o: timer.h
-.\output\fsm_master.o: analise.h
-.\output\fsm_master.o: ssp.h
-.\output\fsm_master.o: i2c.h
 .\output\fsm_master.o: time.h
 .\output\fsm_master.o: C:\Keil\ARM\Inc\Philips\LPC22XX.H
 .\output\fsm_master.o: fsm_master.h

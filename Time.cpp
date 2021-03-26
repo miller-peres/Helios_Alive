@@ -46,10 +46,36 @@
 long delaycount;
 
 void timer_0_ISR(void) __irq // entra aqui a cada estouro
-{	
+{			
+	static unsigned int Conexao = 0;
+	static unsigned int Reset_Zigbee = 0;
 	static Master_FSM FSM_state; 
 	FSM_state.FSM_START();
-				
+	
+//	if(!(IOPIN0 & RSSI))
+//		{
+//			if(Conexao < 8000)Conexao++;
+//			else 
+//			{
+//				if(Reset_Zigbee == 0)Reset_Zigbee = 1;
+//			}
+//		}	
+//		else Conexao = 0;
+//		
+//		if(Reset_Zigbee)
+//		{
+//			if(Reset_Zigbee == 1)IO0CLR |= RESET_ZIGBEE;//reseta o Zigbee
+//			if(Reset_Zigbee == 400)IO0SET |= RESET_ZIGBEE;
+//			if(Reset_Zigbee && Reset_Zigbee < 120000)Reset_Zigbee++;
+//			if(Reset_Zigbee ==120000)
+//			{
+//				Reset_Zigbee = 0;
+//				Conexao = 0;
+//			}
+//		}
+//		else IO0SET |= RESET_ZIGBEE; 
+	
+
 	T0IR = 1;                             // Clear interrupt flag
 	VICVectAddr = 0;                      // Acknowledge Interrupt
 }

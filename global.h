@@ -12,14 +12,14 @@
 #define	LED_ECG					P0_13
 #define	LED_SPO2				P0_12
 #define	LED_ON_BAT		  		P0_17
-#define	CHAMADA_ENF           	P0_15
 #define CS_AD                 	P0_16
 #define	LED_ENF					P0_11
-#define	DER_1		  			P0_19
-#define	DER_2		  			P0_20
-#define	RESET_ZIGBEE  			P0_21
-#define	RSSI 					P0_23
+#define	DER_1		  			P0_22
+#define	DER_2		  			P0_23
+#define	RESET_ZIGBEE  			P0_18
+#define	RSSI 					P0_28
 #define BOTAO_ON_OFF          	P0_29
+#define LED_VM_AM				P0_30
 
 #define TIME_OUT_ANALISE_PMS		20
 #define	ECG_SOLTO								0x01

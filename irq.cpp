@@ -46,7 +46,7 @@ void init_VIC(void)  {
     /* initialize VIC*/
     VICIntEnClr = 0xffffffff;
     VICVectAddr = 0;
-    VICIntSelect = 0;
+    VICIntSelect = 0; // MILLER AQUI VERIFICA SE SERÁ IRQ(0) OU FIQ(1) MÉDIA OU ALTA PRIORIDADE
 
     /* set all the vector and vector control register to 0 */
     for ( i = 0; i < VIC_SIZE; i++ )

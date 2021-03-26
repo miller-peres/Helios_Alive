@@ -14,5 +14,4 @@ class Button
 		unsigned int time_nurse_push_button_out;
 		unsigned int time_to_turn_off;
 		unsigned short int state_botao;	
-};	
-	
+};		

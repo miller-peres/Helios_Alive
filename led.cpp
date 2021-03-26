@@ -46,13 +46,18 @@ void Led::FSM_LED(Alarm General_Alarm)
 			
 		case DEFINE_ALARMS_PRIORITY:	
 			timerseg++;
-			
+				
 			if((timerseg % 2 == 0)  && (General_Alarm.get_flag_tec_alarm_BAT() == 0))
 			{				
-				IO0SET |= LED_ON_BAT;	
+				IO0SET |= LED_VM_AM;
+				IO0SET |= LED_ON_BAT;
 			}	
 			
-			else IO0CLR |= LED_ON_BAT;
+			else 
+			{
+				IO0CLR |= LED_ON_BAT;
+			}
+
 				
 			if ((General_Alarm.get_flag_tec_alarm() == 1) && (General_Alarm.get_flag_phy_alarm() == 1))
 			{
@@ -85,32 +90,44 @@ void Led::FSM_LED(Alarm General_Alarm)
 		
 		if (timer_zero == 1)
 		{
-			IO0SET |= DER_1;
-			IO0SET |= LED_SPO2;
-			IO0SET |= LED_ENF;
-			IO0SET |= LED_ECG;
-			IO0SET |= BUZZER;
-			IO0SET |= LED_ON_BAT;
-		
-			// LIGA O LED ESPECIFICO DO ALARME TECNICO
-			if (General_Alarm.get_status_nurse() == true)  	      
-				IO0CLR |= LED_ENF;
-			if (General_Alarm.get_flag_tec_alarm_BAT() == 1)  
-				IO0CLR |= LED_ON_BAT;
-			if (General_Alarm.get_flag_tec_alarm_ECG() == 1) 
-				IO0CLR |= LED_ECG;
-			if (General_Alarm.get_flag_tec_alarm_SPO2() == 1) 
-				IO0CLR |= LED_SPO2;
-
-			// LIGA LED EQUIPAMENTO LIGADO SE BATERIA ESTIVER ACIMA DE 6%
+			IO0CLR |= LED_VM_AM;
+//			IO0SET |= LED_SPO2;
+//			IO0SET |= LED_ENF;
+//			IO0SET |= LED_ECG;
+//			IO0SET |= LED_ON_BAT;
+			
 			if ((timerseg % 2 != 0)  && (General_Alarm.get_flag_tec_alarm_BAT() == 0))
+			{
+				// LIGA O LED ESPECIFICO DO ALARME TECNICO
+				if (General_Alarm.get_status_nurse() == true) 
+				{					
+					IO0SET |= LED_ECG;
+					IO0SET |= LED_SPO2;
+					IO0SET |= LED_ON_BAT;
+					IO0CLR |= LED_ENF;
+					IO0SET |= BUZZER;
+				}
+				if (General_Alarm.get_flag_tec_alarm_BAT() == 1) 
+				{					
+					IO0CLR |= LED_ON_BAT;
+				}
+				if (General_Alarm.get_flag_tec_alarm_ECG() == 1) 
+				{
+					IO0CLR |= LED_ECG;
+				}
+				if (General_Alarm.get_flag_tec_alarm_SPO2() == 1)
+				{					
+					IO0CLR |= LED_SPO2;
+				}
+			}
+			// LIGA LED EQUIPAMENTO LIGADO SE BATERIA ESTIVER ACIMA DE 6%
+			else if ((timerseg % 2 == 0)  && (General_Alarm.get_flag_tec_alarm_BAT() == 0))
 			{		
 				IO0SET |= LED_ON_BAT;
-				IO0SET |= BUZZER;
 				IO0CLR |= LED_SPO2;
 				IO0CLR |= LED_ECG;
-				IO0CLR|= LED_ENF;
-				IO0CLR |= DER_1;
+				IO0CLR |= LED_ENF;
+				IO0SET |= LED_VM_AM;
 			}
 			
 			if (timerseg >= (tick + 1000))
@@ -122,13 +139,13 @@ void Led::FSM_LED(Alarm General_Alarm)
 		break;
 			
 			case TEC_WAIT_FAST_CYCLE:
-				IO0CLR |= DER_1;	
+				IO0SET |= LED_VM_AM;	
 				IO0CLR |= LED_SPO2;
 				IO0CLR |= LED_ECG;
 				IO0CLR|= LED_ENF;
 				IO0CLR |= BUZZER;
 				
-				if((timerseg % 2 != 0)  && (General_Alarm.get_flag_tec_alarm_BAT() == 0)) IO0SET |= LED_ON_BAT;
+				if((timerseg % 2 == 0)  && (General_Alarm.get_flag_tec_alarm_BAT() == 0)) IO0SET |= LED_ON_BAT;
 				else IO0CLR |= LED_ON_BAT;
 			
 				if (timerseg >= (tick + 1000))
@@ -145,7 +162,7 @@ void Led::FSM_LED(Alarm General_Alarm)
 			break;
 			
 			case TEC_WAIT_SLOW_CYCLE:
-				if((timerseg % 2 != 0)  && (General_Alarm.get_flag_tec_alarm_BAT() == 0)) IO0SET |= LED_ON_BAT; // COORIGE BUG DE LUMINOSIDADE LED VERDE
+				if((timerseg % 2 == 0)  && (General_Alarm.get_flag_tec_alarm_BAT() == 0)) IO0SET |= LED_ON_BAT; // COORIGE BUG DE LUMINOSIDADE LED VERDE
 				else IO0CLR |= LED_ON_BAT;
 				
 				if (timerseg >= (tick + 20000))
@@ -164,16 +181,21 @@ void Led::FSM_LED(Alarm General_Alarm)
 			if((timerseg % 2 != 0)  && (General_Alarm.get_flag_tec_alarm_BAT() == 0))
 				{	
 					IO0SET |= LED_ON_BAT;
-					IO0CLR |= DER_1;
+					IO0SET |= LED_VM_AM;
 				}
-			
-					IO0CLR |= DER_1;
-					IO0SET |= BUZZER;
-				
+
 			
 			// LIGA O LED ESPECIFICO DO ALARME FISIOL�GICO
-			if (General_Alarm.get_flag_phy_alarm_ECG() == 1)  IO0SET|= LED_ECG;
-			if (General_Alarm.get_flag_phy_alarm_SPO2() == 1) IO0SET |= LED_SPO2;
+			if (General_Alarm.get_flag_phy_alarm_ECG() == 1) 
+			{
+				IO0SET|= LED_ECG;
+				IO0SET |= BUZZER;
+			}
+			if (General_Alarm.get_flag_phy_alarm_SPO2() == 1)
+			{				
+				IO0SET |= LED_SPO2;
+				IO0SET |= BUZZER;
+			}
 			
 			
 			if (timerseg >= (tick + 500))
@@ -184,7 +206,7 @@ void Led::FSM_LED(Alarm General_Alarm)
 			break;
 			
 			case PHY_WAIT_FAST_CYCLE:
-				IO0CLR |= DER_1;
+				IO0SET |= LED_VM_AM;
 				IO0CLR |= LED_SPO2;
 				IO0CLR |= LED_ECG;
 				IO0CLR |= BUZZER;

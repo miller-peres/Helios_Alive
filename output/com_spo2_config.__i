@@ -1,0 +1,5 @@
+--cpp -c --cpu ARM7TDMI -g -O3 --split_ldm -Ic:\instramed
+-I C:\Keil\ARM\RV31\INC
+-I C:\Keil\ARM\CMSIS\Include
+-I C:\Keil\ARM\Inc\Philips
+-o .\output\com_spo2_config.o --depend .\output\com_spo2_config.d "com_spo2_config.cpp"

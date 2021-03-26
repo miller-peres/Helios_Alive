@@ -11,7 +11,7 @@
 ******************************************************************************/
 #ifndef __IRQ_H 
 #define __IRQ_H
-
+typedef unsigned long  DWORD;
 /* if nested interrupt is used, NEST_INTERRUPT needs to be set to 1, otherwise 0 */
 #define NESTED_INTERRUPT	0
 

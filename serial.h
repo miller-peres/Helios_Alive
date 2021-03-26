@@ -173,6 +173,7 @@
 #define ENABLE2 BIT_27
 #define ENABLE3 BIT_16
 #define ENABLE4 BIT_29
+//#define LED_VM_AM BIT_30
 #define LATCH   BIT_17
 #define SCLK1   BIT_17
 #define SDATA1  BIT_19

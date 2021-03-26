@@ -2,7 +2,7 @@
 #include "lpc21xx.h"
 #include "global.h"
 
-Button::Button(){}
+Button::Button(void){}
 
 enum STATE_BUTTON_FSM
 {
@@ -61,16 +61,16 @@ time_nurse_push_button_out = 10000;
 			}
 		break;	
 		
-		case TURN_OFF:
+		case TURN_OFF:	
 			IO0CLR |= ON_OFF;
 			IO0SET |= LED_ECG;
 			IO0SET |= LED_SPO2;
-			IO0SET |= LED_ENF;
+			IO0SET |= LED_ENF;	
 			state_botao = CHECK_TURN_ON;
 			while(1)
 			{
 			//Só fica preso para o software não rodar quando quiser desligar o aparelho.
 			}
-		break;
+		//break;
 	}
 }

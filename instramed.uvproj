@@ -447,6 +447,26 @@
               <FileType>8</FileType>
               <FilePath>.\alarm.cpp</FilePath>
             </File>
+            <File>
+              <FileName>spo2.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\spo2.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>zigbee.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\zigbee.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>vic.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\vic.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>interrupt.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\interrupt.cpp</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

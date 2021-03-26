@@ -10,6 +10,10 @@
 ".\output\led.o"
 ".\output\botao.o"
 ".\output\alarm.o"
+".\output\spo2.o"
+".\output\zigbee.o"
+".\output\vic.o"
+".\output\interrupt.o"
 --strict --scatter ".\output\9.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

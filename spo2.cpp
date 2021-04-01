@@ -28,7 +28,7 @@ Spo2::Spo2(void)
 	gMonitoraSpo2 = true;
 }
 
-void Spo2::config_COM_spo2(Vic init_VIC_cpy)
+void Spo2::config_COM_spo2(Vic start_vic)
 {
 	port_spo2 = COM1;
 	n_spo2 = 8;
@@ -60,11 +60,11 @@ if (port_spo2 == COM1)
 	U1THR = ch;
 }
 
-init_VIC_cpy.Set_install_irq(UART1_INT, (void *)Treat_Data_SPO2_BCI(init_VIC_cpy));
+start_vic.Set_install_irq( UART1_INT, (void *)Treat_Data_SPO2_BCI(start_vic));
 //install_irq (UART1_INT, (void *)Treat_Data_SPO2_BCI(init_VIC_cpy)); //handler_FSM_spo2 UartHandlerUART1
 }
 
-void* Spo2::Treat_Data_SPO2_BCI(Vic init_VIC_cpy)
+void* Spo2::Treat_Data_SPO2_BCI(Vic start_vic)
 {
 	
 	IENABLE;					/* handles nested interrupt */	
@@ -319,8 +319,8 @@ void* Spo2::Treat_Data_SPO2_BCI(Vic init_VIC_cpy)
 			interrupt, then bail out */
 			Dummy = Dummy & 0xFF;
 			IDISABLE;
-			init_VIC_cpy.Set_vic_vect_addr(0);
-			//VICVectAddr = 0;		/* Acknowledge Interrupt */
+		//	init_VIC_cpy.Set_vic_vect_addr(0);
+			VICVectAddr = 0;		/* Acknowledge Interrupt */
 			//return;
 		}
 		if ( LSRValue & LSR_RDR )	/* Receive Data Ready */			
@@ -367,9 +367,10 @@ void* Spo2::Treat_Data_SPO2_BCI(Vic init_VIC_cpy)
 	}
 	T1IR        = 1; 
 	IDISABLE;
-	init_VIC_cpy.Set_vic_vect_addr(0);
-	//VICVectAddr = 0;		/* Acknowledge Interrupt */
+	//init_VIC_cpy.Set_vic_vect_addr(0);
+	VICVectAddr = 0;		/* Acknowledge Interrupt */
 	IO0SET |= BUZZER;
+	return 0;
 }
 
 void Spo2::monitora_spo2()

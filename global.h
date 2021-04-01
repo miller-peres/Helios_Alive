@@ -265,7 +265,7 @@ extern unsigned char gArtifact;
 extern unsigned char gSmallPulse;
 
 //Variaveis Zigbee
-extern unsigned char  gCountZigbee ;
+//extern unsigned char  gCountZigbee;
 extern unsigned char  gVetorZigbee[100];
 extern unsigned char  gVetorZigbeeCopia[100];
 extern unsigned char  gVetorZigbee2[100];

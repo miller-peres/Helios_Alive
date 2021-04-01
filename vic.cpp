@@ -1,23 +1,23 @@
-/*****************************************************************************
- *   vic.cpp: Interrupt handler C++ file for Philips LPC214x Family Microprocessors *
-******************************************************************************/
 #include "vic.h"
-//#include "lpc21xx.h"
+#include "lpc21xx.h"
+#include "global.h"
 
-Vic::Vic(void){}
+Vic::Vic(void)
+{
+i = 0;
+//gCountZigbee = 0;
+}
 
 //	void Vic::default_VIC()
 //{
+//	VICDefVectAddr = 0;
 //	VICVectAddr = 0;		/* Acknowledge Interrupt */ 
 //    while ( 1 );
 //}
 	
 void Vic::init_VIC()
 {
-	unsigned long i = 0;
-    unsigned long *vect_addr, *vect_cntl;
-   	
-    /* initialize VIC*/
+    //INICIALIZA A VIC
     VICIntEnClr = 0xffffffff;
     VICVectAddr = 0;
     VICIntSelect = 0;
@@ -30,17 +30,13 @@ void Vic::init_VIC()
 	*vect_addr = 0;	
 	*vect_cntl = 0;
     }
+	VICDefVectAddr = 0;
 	VICVectAddr = 0;
-	VICDefVectAddr = VICVectAddr;
     return;
 }
 
-unsigned long Vic::Set_install_irq(unsigned long int_number, void *handlerAddr)
+unsigned long Vic::Set_install_irq(unsigned long int_number, void *handlerAddr) // unsigned long Vic::Set_install_irq(unsigned long UART0_INT, Treat_Data_Zigbee(start_vic))
 {
-	unsigned long i;
-    unsigned long *vect_addr;
-    unsigned long *vect_cntl;
-      
     VICIntEnClr = 1 << int_number;	/* Disable Interrupt */
     
     for ( i = 0; i < VIC_SIZE; i++ )
@@ -68,3 +64,4 @@ void Vic::Set_vic_vect_addr(unsigned long VicVectAddr_update)
 {
 	VICVectAddr = VicVectAddr_update;
 }
+

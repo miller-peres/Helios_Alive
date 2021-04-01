@@ -2,7 +2,7 @@ SET PATH=C:\Keil\ARM\ARMCC\bin\;C:\Program Files\Common Files\Oracle\Java\javapa
 SET CPU_TYPE=LPC2114
 SET CPU_VENDOR=NXP (founded by Philips)
 SET UV2_TARGET=Target 1
-SET CPU_CLOCK=0x00B71B00
+SET CPU_CLOCK=0x00989680
 "C:\Keil\ARM\ARMCC\bin\ArmCC" --Via ".\output\startup.__i"
 "C:\Keil\ARM\ARMCC\bin\ArmCC" --Via ".\output\time.__i"
 "C:\Keil\ARM\ARMCC\bin\ArmCC" --Via ".\output\retarget.__i"
@@ -19,4 +19,4 @@ SET CPU_CLOCK=0x00B71B00
 "C:\Keil\ARM\ARMCC\bin\ArmCC" --Via ".\output\vic.__i"
 "C:\Keil\ARM\ARMCC\bin\ArmCC" --Via ".\output\interrupt.__i"
 "C:\Keil\ARM\ARMCC\bin\ArmLink" --Via ".\output\9.lnp"
-C:\Keil\ARM\ARMCC\bin\fromelf.exe ".\output\9.2" --i32combined --output ".\output\9.hex"
+C:\Keil\ARM\ARMCC\bin\fromelf.exe ".\output\9.axf" --i32combined --output ".\output\9.hex"

@@ -5,22 +5,26 @@
 
 Zigbee::Zigbee(void)
 {
-gCPUVersionMsb = 10;
-gCPUVersionLsb = 00; 
-gCPURevision = 00; 
+gCPUVersionMsb   = 9;
+gCPUVersionLsb   = 2; 
+gCPURevision     = 3; 
 gProtocolVersion = 1;
-UART0Count = 0;
+UART0Count       = 0;
+gCountZigbee     = 0;
 }
 
 void Zigbee::send_package(bool resend_package) //Spo2 Init_spo2
 {
-unsigned char i = 0;
+unsigned char i        = 0;
 unsigned char Checksum = 0;
-port = COM0;
-gValorSpo2= 99;
+port                   = COM0;
+
+gValorSpo2= gAlarmeSpo2Max;
+gVBat++;
 
 	if(!resend_package)
-	{		
+	{	
+		//IO0CLR |= BUZZER;
 		gVetorZigbee[0] = 0x7E;  // Start Delimeter
 		gVetorZigbee[1] = 0x00;  // Lenght MSB
 		gVetorZigbee[2] = NUMERO_BYTES - 4;// Lenght LSB
@@ -101,20 +105,13 @@ gValorSpo2= 99;
 
 void Zigbee::uart_tx_char(char port, unsigned char ch)
 {
-	  if (port == COM0) 
-  {
      while (!(U0LSR & 0x20));
      U0THR = ch;
-  }
-  else 
-  {
-     while (!(U1LSR & 0x20));
-     U1THR = ch;
-  }
 }
 
-void Zigbee::config_COM_zigbee(Vic init_VIC_cpy)
+void Zigbee::config_COM_zigbee(Vic start_vic)
 {
+	//FAZ ISSO 1X
 	port = COM0;
 	n = 8;
 	StopBits = 1;
@@ -140,16 +137,26 @@ void Zigbee::config_COM_zigbee(Vic init_VIC_cpy)
 	{
 		U0LCR &= 0xEF;
 	}
-	U0LCR |= 0x80;
-	//baud = 10;
-	//U0FDR = 0x85;
-	U0DLL  = baud;			  
+	U0LCR |=  0x80;
+	U0DLL  =  baud;			  
 	U0DLM  = (baud >> 8);				
 	U0LCR &= ~(0x80);				                                        
-	U0IER = BIT_0 | BIT_2;   // Habilita int RDA e RX                          
-	init_VIC_cpy.Set_install_irq(UART0_INT, (void *)Treat_Data_Zigbee(init_VIC_cpy));
-	//install_irq (UART0_INT, (void *)Treat_Data_Zigbee(init_VIC_cpy)); // CONFIGURA_INTERRUPCAO_VIC(0,UartHandlerUART0,UART0);		
+	U0IER = BIT_0 | BIT_2;   // Habilita int RDA e RX 
+	start_vic.Set_install_irq(UART0_INT, void_cast(&Zigbee::Treat_Data_Zigbee)); 
+	//start_vic.Set_install_irq (UART0_INT, (void *)Treat_Data_Zigbee(start_vic));
 }
+
+//template<typename T, typename R>
+//void* Zigbee::void_cast(R(T::*f)())
+//{
+//	union 
+//	{
+//		R(T::*pf)();
+//		void* p;
+//	};
+//	pf = f;
+//	return p;
+//}
 
 void Zigbee::COM_tx_buffer()
 {
@@ -166,61 +173,68 @@ void Zigbee::COM_tx_buffer()
 	}
 }
 
-void* Zigbee::Treat_Data_Zigbee(Vic init_VIC_cpy)
-{
-	IO0SET |= BUZZER;
-	spo2_bpm++;
-	
-	unsigned char RxDado = 0;
+void Zigbee::Treat_Data_Zigbee() //Vic start_vic
+{	
+	// PARA TESTE
 	unsigned char UART0Buffer[BUFSIZE];
 	IENABLE;					/* handles nested interrupt */	
 	IIRValue = U0IIR;
 	IIRValue >>= 1;				/* skip pending bit in IIR */
 	IIRValue &= 0x07;			/* check bit 1~3, interrupt identification */
-	RxDado = U0RBR;		
-	if (RxDado == 0x7E)gCountZigbee = 0;
-	else gCountZigbee++;
-	gVetorZigbee2[gCountZigbee] = RxDado;
-	
-	if((gCountZigbee == 29) && (gVetorZigbee2[15] == 0xEA) && (gVetorZigbee2[16] == 0x69) && (gVetorZigbee2[17] == 0x6E) && (gVetorZigbee2[18] == 0x73))
+//	RxDado = U0RBR;		
+	//if (RxDado == 0x7E)gCountZigbee = 0;
+	gCountZigbee++;
+//	init_VIC_cpy.Get_Count_Zigbee();
+	if(gCountZigbee >= 2)
 	{
-		gVersaoProtocolo = gVetorZigbee2[19];
-		
-		gDerivacao = gVetorZigbee2[20] & 0x0F;
-		gLiberaDesliga = (gVetorZigbee2[20] & 0x40) >> 6;
-		gSincProtocolo = (gVetorZigbee2[20] & 0x20) >> 5;
-		gMonitoraEcg = (gVetorZigbee2[20] & 0x10) >> 4;
-		gMonitoraSpo2 = (gVetorZigbee2[20] & 0x80) >> 7;
-		resend_package_general = (gVetorZigbee2[21] & 0x01);
-		gMonitoraPms = (gVetorZigbee2[21] & 0x02) >> 1;					
-		gAlarmeStMin = gVetorZigbee2[22];
-		gAlarmeStMax = gVetorZigbee2[23];
-		gAlarmeBpmMax = gVetorZigbee2[24] | (gVetorZigbee2[25] << 8);
-		gAlarmeBpmMin = gVetorZigbee2[26] | (gVetorZigbee2[27] << 8);
-		gAlarmeSpo2Min = gVetorZigbee2[28];
-		gAlarmeSpo2Max = gVetorZigbee2[29]; 
-		
-		if(resend_package_general)
-		{
-			send_package(true);
-			resend_package_general = false;
-		}
-		else
-			gPacoteRecebido = 1;
-		
-		if(gSincProtocolo)
-		{	
-			gCountCentral = 0;
-			gIndexVetor = 0;
-		}
+		IO0SET |= BUZZER; //Aqui ele entrou ou não? Não le aí não
 	}
 	
+//	gVetorZigbee2[gCountZigbee] = RxDado;
+
+//	if(gCountZigbee == 29)// && (gVetorZigbee2[15] == 0xEA) && (gVetorZigbee2[16] == 0x69) && (gVetorZigbee2[17] == 0x6E) && (gVetorZigbee2[18] == 0x73))
+//	{
+//		// NÃO ENTRA AQUI
+//		gVersaoProtocolo = gVetorZigbee2[19];
+//		gDerivacao = gVetorZigbee2[20] & 0x0F;
+//		gLiberaDesliga = (gVetorZigbee2[20] & 0x40) >> 6;
+//		gSincProtocolo = (gVetorZigbee2[20] & 0x20) >> 5;
+//		gMonitoraEcg = (gVetorZigbee2[20] & 0x10) >> 4;
+//		gMonitoraSpo2 = (gVetorZigbee2[20] & 0x80) >> 7;
+//		resend_package_general = (gVetorZigbee2[21] & 0x01);
+//		gMonitoraPms = (gVetorZigbee2[21] & 0x02) >> 1;					
+//		gAlarmeStMin = gVetorZigbee2[22];
+//		gAlarmeStMax = gVetorZigbee2[23];
+//		gAlarmeBpmMax = gVetorZigbee2[24] | (gVetorZigbee2[25] << 8);
+//		gAlarmeBpmMin = gVetorZigbee2[26] | (gVetorZigbee2[27] << 8);
+//		gAlarmeSpo2Min = gVetorZigbee2[28];
+//		gAlarmeSpo2Max = gVetorZigbee2[29]; 
+//		
+//		if(resend_package_general)
+//		{
+//			//não entra aqui
+//			send_package(true);
+//			resend_package_general = false;
+//		}
+//		else
+//			gPacoteRecebido = 1;
+//		
+//		if(gSincProtocolo)
+//		{	
+//			// não entra aqui		
+//			gCountCentral = 0;
+//			gIndexVetor   = 0;
+//		}
+//	}
+//	
 	if ( IIRValue == IIR_RLS )	/* Receive Line Status */
 	{
+		// entra aqui
 		LSRValue = U0LSR;
 		/* Receive Line Status */
 		if ( LSRValue & (LSR_OE|LSR_PE|LSR_FE|LSR_RXFE|LSR_BI) )
 		{
+			// entra aqui
 			/* There are errors or break interrupt */
 			/* Read LSR will clear the interrupt */
 			UART0Status = LSRValue;
@@ -229,11 +243,12 @@ void* Zigbee::Treat_Data_Zigbee(Vic init_VIC_cpy)
 			Dummy = Dummy & 0xFF; 
 			IDISABLE;
 			VICVectAddr = 0;
-			init_VIC_cpy.Set_vic_vect_addr(0);
+			//start_vic.Set_vic_vect_addr(0);
 			//return;
 		}
 		if ( LSRValue & LSR_RDR )	/* Receive Data Ready */			
 		{
+			//não entra aqui
 			/* If no error on RLS, normal ready, save into the data buffer. */
 			/* Note: read RBR will clear the interrupt */
 			UART0Buffer[UART0Count] = U0RBR;
@@ -273,9 +288,9 @@ void* Zigbee::Treat_Data_Zigbee(Vic init_VIC_cpy)
 			UART0TxEmpty = 0;
 		}
 	}
-	IO0CLR |= BUZZER;
+//	// entra aqui
 	IDISABLE;
 	VICVectAddr = 0;
-	init_VIC_cpy.Set_vic_vect_addr(0);
-	//COM_tx_buffer();
+	//start_vic.Set_vic_vect_addr(0);
+	//return 0;
 }

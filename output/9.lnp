@@ -17,4 +17,4 @@
 --strict --scatter ".\output\9.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
---list ".\output\9.map" -o .\output\9.2
+--list ".\output\9.map" -o .\output\9.axf
